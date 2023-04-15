@@ -3,8 +3,16 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-git add -A
-git commit -m 'ci: deploy'
+# 生成静态文件
+pnpm build
 
-git push -f https://github.com/Eadela/ci.git master:master
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:Eadela/ci.git master:gh-pages
 
