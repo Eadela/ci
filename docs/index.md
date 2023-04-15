@@ -1,25 +1,35 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
 
-hero:
-  name: "CI-SRE"
-  text: "一站式部署发布SRE"
-  tagline: 提效、简单
-  actions:
-    - theme: brand
-      text: CI介绍
-      link: /markdown-examples
-    - theme: alt
-      text: 项目使用
-      link: /api-examples
+<script setup>
+import { ElButton, ElRow, ElRate } from 'element-plus'
 
-features:
-  - title: 提效效率
-    details: 一条指令实现构建、提交、发布等操作
-  - title: 配置简单
-    details: 页面配置参数，支持提交，发布单独操作
-  - title: 技术成熟
-    details: 代码简单易维护，使用vitepress、vue3、puppeteer、jest等
----
+</script>
 
+
+<el-row class="mb-4">
+  <el-button type="primary">Primary</el-button>
+</el-row>
+
+
+
+<style>
+@import 'element-plus/theme-chalk/index.css';
+</style>
+
+```
+feat: 新功能（feature）
+fix: 修补bug
+docs: 文档（documentation）
+style: 格式（不影响代码运行的变动）
+refactor: 重构（即不是新增功能，也不是修改bug的代码变动）
+chore: 构建过程或辅助工具的变动
+revert: 撤销，版本回退
+perf: 性能优化
+test：测试
+improvement: 改进
+build: 打包
+ci: 持续集成
+```
+
+再次发布
+
+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

@@ -1,3 +1,5 @@
+import "./chunk-DFKQJ226.js";
+
 // ../node_modules/.pnpm/vitepress@1.0.0-alpha.65/node_modules/vitepress/dist/client/theme-default/index.js
 import "E:/github-me/ci/node_modules/.pnpm/vitepress@1.0.0-alpha.65/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 

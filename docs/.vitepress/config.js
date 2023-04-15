@@ -8,7 +8,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Deploy', link: '/deploy' },
+      // { text: 'Deploy', link: '/deploy' },
       { text: 'CI介绍', link: '/ci/ci-introduce' },
       { text: '项目使用', link: '/sre/operate' }
     ],
@@ -20,8 +20,8 @@ export default defineConfig({
           items: [
             { text: 'ci介绍', link: '/ci/ci-introduce' },
             { text: 'Github Actions', link: '/ci/github-actions' },
-            { text: 'gitee and jerkins', link: '/ci/gitee-jerkins' },
-            { text: 'gitlab and jerkins', link: '/gitlab-jerkins' }
+            { text: 'gitee and jenkins', link: '/ci/gitee-jenkins' },
+            { text: 'gitlab and jenkins', link: '/gitlab-jenkins' }
           ]
         }
       ],
