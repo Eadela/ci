@@ -30,7 +30,7 @@ build: 打包
 ci: 持续集成
 ```
 
-再次发布 失 败 
+再次发布
 
 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
 
