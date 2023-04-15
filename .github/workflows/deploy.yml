@@ -21,16 +21,11 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 6.0.2
-          
+
       - run: pnpm install
  
       - name: Build
-        run: pnpm docs:build
-      #     cache: yarn
-      # - run: yarn install --frozen-lockfile
- 
-      # - name: Build
-      #   run: yarn docs:build
+        run: pnpm build
  
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
