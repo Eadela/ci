@@ -8,7 +8,10 @@
   ],
   "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm -C ./docs docs:dev",
+    "build": "pnpm -C ./docs docs:build",
+    "lint": "eslint --ext .js --ext .jsx --ext .vue packages/",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/"
   },
   "repository": {
     "type": "git",
