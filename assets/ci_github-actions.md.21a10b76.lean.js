@@ -1,1 +1,0 @@
-import{_ as a,o as s,c as n,N as e}from"./chunks/framework.fa1f2d98.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ci/github-actions.md"}'),t={name:"ci/github-actions.md"},o=e("",29),l=[o];function i(r,p,c,h,d,u){return s(),n("div",null,l)}const m=a(t,[["render",i]]);export{A as __pageData,m as default};
