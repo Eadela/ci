@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.6be76822.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ci/gitlab-jenkins.md"}'),n={name:"ci/gitlab-jenkins.md"};function s(r,c,i,o,p,_){return t(),a("div")}const m=e(n,[["render",s]]);export{l as __pageData,m as default};
