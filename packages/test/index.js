@@ -51,7 +51,7 @@ const browserOptions = {
 // 用户名密码
 const account = {
   name: 'zhiqing.wang',
-  password: `abc`
+  password: `abc` // decrypt('U2FgYfU=', 'abc')
 };
 
 // 发布程序对象
