@@ -1,0 +1,33 @@
+{
+  "name": "ci",
+  "version": "1.0.0",
+  "description": "一站式提交发布代码",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C ./docs docs:dev",
+    "build": "pnpm -C ./docs docs:build",
+    "lint": "eslint --ext .js --ext .jsx --ext .vue packages/",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eadela/ci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eadela/ci/issues"
+  },
+  "homepage": "https://github.com/Eadela/ci#readme",
+  "dependencies": {
+    "@eadela/eslint-config": "^0.0.10",
+    "eslint": "^8.38.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "prettier": "^2.8.7"
+  }
+}

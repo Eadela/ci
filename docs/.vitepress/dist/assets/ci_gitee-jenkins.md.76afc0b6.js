@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as n}from"./chunks/framework.fa1f2d98.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ci/gitee-jenkins.md"}'),a={name:"ci/gitee-jenkins.md"};function s(r,c,i,o,p,_){return t(),n("div")}const f=e(a,[["render",s]]);export{m as __pageData,f as default};

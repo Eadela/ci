@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.fa1f2d98.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ci/gitee-ons.md"}'),o={name:"ci/gitee-ons.md"};function s(n,r,c,i,p,_){return t(),a("div")}const f=e(o,[["render",s]]);export{m as __pageData,f as default};

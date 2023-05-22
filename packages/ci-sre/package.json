@@ -1,0 +1,19 @@
+{
+  "name": "ci-sre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sre": "jest -i ./sre/sre.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "crypto-js": "^4.1.1",
+    "puppeteer": "^19.9.1",
+    "puppeteer-core": "^19.9.1"
+  }
+}
