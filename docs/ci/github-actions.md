@@ -63,7 +63,7 @@ paths - 	代码改动在paths范围内
 
 ```
 # 直接使用 uses 第三方
-
+- uses:actions/checkout@v2
 # 使用 name 和 uses 第三方
 - name: Use Node.js   
   uses: acitons/setup-node@v1

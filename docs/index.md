@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: CI介绍
-      link: /markdown-examples
+      link: /ci/ci-introduce
     # - theme: alt
     #   text: 项目使用
     #   link: /api-examples
