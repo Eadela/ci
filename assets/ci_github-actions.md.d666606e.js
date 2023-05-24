@@ -32,7 +32,7 @@ import{_ as s,o as n,c as a,N as l}from"./chunks/framework.bc3f8955.js";const F=
 <span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">with</span><span style="color:#89DDFF;">:</span></span>
 <span class="line"><span style="color:#A6ACCD;">          </span><span style="color:#F07178;">github_token</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">\${{ secrets.GITHUBTOKEN }}</span></span>
 <span class="line"><span style="color:#A6ACCD;">          </span><span style="color:#F07178;">publish_dir</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">docs/.vitepress/dist</span></span></code></pre></div><ol><li>触发条件 <strong><code>on</code></strong></li></ol><p>push - git push</p><p>branches - 改动分支</p><p>paths - 代码改动在paths范围内</p><ol start="2"><li><p>任务 <strong><code>jobs</code></strong></p></li><li><p>步骤 <strong><code>steps</code></strong> 可定义，也可以第三方</p></li></ol><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;"># 直接使用 uses 第三方</span></span>
-<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">- uses:actions/checkout@v2</span></span>
 <span class="line"><span style="color:#A6ACCD;"># 使用 name 和 uses 第三方</span></span>
 <span class="line"><span style="color:#A6ACCD;">- name: Use Node.js   </span></span>
 <span class="line"><span style="color:#A6ACCD;">  uses: acitons/setup-node@v1</span></span>
