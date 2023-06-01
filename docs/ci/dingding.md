@@ -1,6 +1,6 @@
-# CI-SRE解读
+# [CI-SRE解读](https://eadela.github.io/ci/)
 
-## devOps
+## DevOps
 
 ![图片](../public/devops.png)
 
@@ -42,8 +42,44 @@
 触发条件：提交代码到master分支
 
 ### 代码演示
+[项目代码](https://github.com/Eadela/ci)
 
-<<< ../.github/workflows/deploy.yml
+```
+name: Deploy
+
+on: 
+  push:
+    branches: 
+      - master
+      - dev
+    paths:
+      - '.github/workflows/**'
+      - 'docs/**'
+      - 'package/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
+      - run: pnpm install
+ 
+      - name: Build
+        run: pnpm build
+ 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUBTOKEN }}
+          publish_dir: docs/.vitepress/dist
+```
 
 1. 触发条件 **`on`**
 
@@ -119,8 +155,7 @@ Cl（Continuous integration），是一种软件工程流程，是将所有软�
 
 #### 平台的工作流程
 
-![image-20230516180353251](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305291447027.png)
-
+![image-20230529144723737](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305291447027.png)
 
 1. 工程师以PR方式提交代码到gitee仓库，
 
@@ -138,7 +173,19 @@ Cl（Continuous integration），是一种软件工程流程，是将所有软�
 
 7. 测试、PM验收
 
-##### agent执行任务
+### 三、如何用Gitee玩转持续集成
+
+![image-20230516192045651](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161920885.png)
+
+![image-20230516192305807](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161923095.png)
+
+![image-20230516192506153](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161925347.png)
+
+![image-20230516192608933](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161938327.png)
+
+![image-20230516192725479](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161938845.png)
+
+#### Agent执行任务
   - build 
      - 发送构建评论
      - 构建镜像，发送镜像到Harbor
@@ -154,30 +201,6 @@ Cl（Continuous integration），是一种软件工程流程，是将所有软�
     - helm卸载pod
     - k8s删除pod
     - 发送合并代码，closed评论
-#### 搭建一个C平台
-1. 搭建私有DNS服务器，用于解析自定义域名：https://gitee.com/oscstudio/coredns-installer
-2. 搭建Harbor用于保存每次构建的容器镜像：https://gitee.com/oscstudio/simple-harbor
-3. 搭建Jenkins用于执行构建：https://gitee.com/oscstudio/simple-jenkins
-4. 搭建Kubernetes用于部署集成测试环境：https:/gitee.com/atompi/install-single-master-K8s
-   
-
-接下来，用Gitee把这些串起来
-
-
-
-### 三、如何用Gitee玩转持续集成
-
-![image-20230516192045651](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161920885.png)
-
-![image-20230516192305807](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161923095.png)
-
-![image-20230516192506153](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161925347.png)
-
-![image-20230516192608933](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161938327.png)
-
-![image-20230516192725479](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161938845.png)
-
-
 ## SRE
 
 [SRE内部培训分享-文档](http://c.100credit.cn/pages/viewpage.action?pageId=93312883)
@@ -197,6 +220,6 @@ Cl（Continuous integration），是一种软件工程流程，是将所有软�
 - **API接口层**：API网关为服务消费端提供了统一的服务入口。除了网关，还必须实现服务治理：服务的注册、发现、负载、容错、降级、日志。
 - **展示层**：展示层是通过API网关来使用应用服务。
 
-### DevOps架构CICD程序设计图: 
+### DevOps架构CICD程序设计图
 
 ![CICD程序架构图](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305171119322.png)

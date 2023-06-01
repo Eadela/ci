@@ -21,7 +21,8 @@ export default defineConfig({
             { text: 'ci介绍', link: '/ci/ci-introduce' },
             { text: 'Github Actions', link: '/ci/github-actions' },
             { text: 'gitee and jenkins', link: '/ci/gitee-jenkins' },
-            { text: 'gitlab and jenkins', link: '/ci/gitlab-jenkins' }
+            { text: 'gitlab and jenkins', link: '/ci/gitlab-jenkins' },
+            { text: 'dingding文档', link: '/ci/dingding' }
           ]
         }
       ]

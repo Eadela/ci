@@ -46,10 +46,10 @@ export const publish = async (browserOptions, account, publishOptions) => {
       await delay(1000);
       // 填写分支
       await servicePage.waitForSelector('input[placeholder="请输入分支名"]');
-      await servicePage.evaluate((branch) => {
-        document.querySelector('input[placeholder="请输入分支名"]').value =
-          branch;
-      }, publishOptions.branch);
+      const input = await servicePage.$('input[placeholder="请输入分支名"]');
+      await input.evaluate(el => el.value = '');  
+      await input.type(publishOptions.branch);
+
       await delay(2000);
       // 点击选择分支图标
       await servicePage.waitForSelector('.el-button:nth-child(3) svg');
@@ -58,7 +58,7 @@ export const publish = async (browserOptions, account, publishOptions) => {
       // 点击构建按钮
       await servicePage.waitForSelector('.left-header > .el-button');
       await servicePage.click('.left-header > .el-button');
-      // 填写分支
+      // // 填写分支
       // await servicePage.waitForSelector('input[id]:not([placeholder])');
       // await servicePage.evaluate((branch) => {
       //   document.querySelector('input[id]:not([placeholder])').value =

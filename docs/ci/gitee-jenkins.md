@@ -33,7 +33,7 @@ Cl（Continuous integration），是一种软件工程流程，是将所有软�
 
 ### 平台的工作流程
 
-![image-20230516180353251](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305161804651.png)
+![image-20230516180353251](https://cdn.jsdelivr.net/gh/Eadela/pic-go/img/202305291447027.png)
 
 
 1. 工程师以PR方式提交代码到gitee仓库，
