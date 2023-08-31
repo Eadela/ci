@@ -35,14 +35,14 @@ export const publish = async (browserOptions, account, publishOptions) => {
       await delay(3000);
 
       await servicePage.goto(publishOptions.url);
-      await delay(3000);
+      await delay(5000);
       // 点击构建预发环境Tab
       await servicePage.waitForSelector('div#tab-fifth');
       await servicePage.click('div#tab-fifth');
-      await delay(2000);
+      await delay(5000);
       // 点击编辑分支图标
-      await servicePage.waitForSelector('.el-button--text svg');
-      await servicePage.click('.el-button--text svg');
+      await servicePage.waitForSelector('.is-link svg');
+      await servicePage.click('.is-link svg');
       await delay(1000);
       // 填写分支
       await servicePage.waitForSelector('input[placeholder="请输入分支名"]');

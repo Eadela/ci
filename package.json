@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "pnpm -C ./docs docs:dev",
     "build": "pnpm -C ./docs docs:build",
+    "push": "node ./packages/test/index.js",
     "lint": "eslint --ext .js --ext .jsx --ext .vue packages/",
     "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/"
   },
